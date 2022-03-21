@@ -39,9 +39,9 @@ For example, the user-agent string below is identified as both a bot and a real 
 Mozilla/5.0 (Linux; Android 4.2.1; CUBOT GT99 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19
 ````
 
-- *myip.ms* identifies it as a [bot](https://myip.ms/view/web_bots/1742760/Known_Web_Bots_Mozilla_5_0_Linux_Android_4_2_1_CUBOT_GT99_Build_JOP40D_AppleWebKit_535_19_KHTML_like_Gecko_Chrome_18_0_1025_166_Mobile_Safari_535_19.html)
+- **myip.ms** -> [bot](https://myip.ms/view/web_bots/1742760/Known_Web_Bots_Mozilla_5_0_Linux_Android_4_2_1_CUBOT_GT99_Build_JOP40D_AppleWebKit_535_19_KHTML_like_Gecko_Chrome_18_0_1025_166_Mobile_Safari_535_19.html)
 
-- *user-agents.net* identifies it as a [browser](https://user-agents.net/string/mozilla-5-0-linux-android-4-2-1-cubot-gt99-build-jop40d-applewebkit-535-19-khtml-like-gecko-chrome-18-0-1025-166-mobile-safari-535-19)
+- **user-agents.net** -> [browser](https://user-agents.net/string/mozilla-5-0-linux-android-4-2-1-cubot-gt99-build-jop40d-applewebkit-535-19-khtml-like-gecko-chrome-18-0-1025-166-mobile-safari-535-19)
 
 
 ## Testing
@@ -53,7 +53,7 @@ To test the full test suite of unit and integration tests, run:
 cargo test
 ```
 
-# Credits
+## Credits
 There are many excellent bot detection libraries available for other languages and awesome developers maintaining bot and user-agent identification data. This library draws inspiration from many of them, especially:
 | Library  | Language |
 | ------------- | ------------- |
