@@ -1,5 +1,5 @@
 # isbot
-<img src="./.github/logo.png" width="100" align="middle">
+<img src="./.github/logo.png" width="100" align="right">
 
 Rust library to detect bots using a user-agent string. 
 
@@ -45,6 +45,9 @@ Mozilla/5.0 (Linux; Android 4.2.1; CUBOT GT99 Build/JOP40D) AppleWebKit/535.19 (
 
 
 ## Testing
+
+### Unit and integration tests
+To test the full test suite of unit and integration tests, run:
 
 ```bash
 cargo test
