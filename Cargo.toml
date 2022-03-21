@@ -1,0 +1,15 @@
+[package]
+name = "isbot"
+version = "0.1.0"
+edition = "2021"
+authors = ["Bryan Morgan <bryan@thinkware.io>"]
+description = "Detect if a user-agent is a known bot"
+documentation = "https://docs.rs/isbot"
+repository = "https://github.com/BryanMorgan/isbot/"
+license = "MIT"
+keywords = ["isbot", "bot", "crawler", "user-agent", "browser"]
+categories = ["parsing", "web-programming", "web-programming::http-server"]
+exclude = ["/src/bin"]
+
+[dependencies]
+regex = "1.5"
