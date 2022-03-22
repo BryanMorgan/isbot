@@ -81,4 +81,4 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: --features="download-fixture-data"
+          args: --features=download-fixture-data
