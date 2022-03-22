@@ -1,4 +1,6 @@
 # isbot
+[![CI](https://github.com/BryanMorgan/isbot/workflows/CI/badge.svg?event=push)](https://github.com/BryanMorgan/isbot/actions)
+
 <img src="./.github/logo.png" width="100" align="right">
 
 Rust library to detect bots using a user-agent string. 
