@@ -11,5 +11,21 @@ keywords = ["isbot", "bot", "crawler", "user-agent", "browser"]
 categories = ["parsing", "web-programming", "web-programming::http-server"]
 exclude = ["/src/bin"]
 
+[features]
+download-fixture-data = ["serde", "serde_json", "yaml-rust", "ureq"]
+
 [dependencies]
 regex = "1.5"
+
+# Optional dependencies only needed to build the download_fixture_data binary
+serde =  {version = "1.0", features = ["derive"], optional = true}
+serde_json = {version = "1.0", optional = true}
+yaml-rust = {version = "0.4", optional = true}
+ureq = { version = "2.4",features = ["json"], optional = true}
+
+[dev-dependencies]
+serde_json = "1.0"
+
+[[bin]]
+name = "download_fixture_data"    
+required-features = ["download-fixture-data"] 
