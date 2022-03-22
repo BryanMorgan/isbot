@@ -75,10 +75,10 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings
+          args: 
 
       - name: Run cargo clippy on download_fixture_data
         uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings --bin download_fixture_data --features="download-fixture-data"
+          args: --features="download-fixture-data"

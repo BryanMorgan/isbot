@@ -44,7 +44,7 @@ cargo run --bin download_fixture_data --features="download-fixture-data"
 This will update files in the [fixtures](./fixtures/) directory.
 
 ### Unit and integration tests
-To test the full test suite of unit and integration tests, run:
+To run all unit and integration tests:
 
 ```bash
 cargo test
