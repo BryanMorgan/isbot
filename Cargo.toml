@@ -12,6 +12,8 @@ categories = ["parsing", "web-programming", "web-programming::http-server"]
 exclude = ["/src/bin"]
 
 [features]
+default = ["include-default-bots"]
+include-default-bots = []
 download-fixture-data = ["serde", "serde_json", "yaml-rust", "ureq"]
 
 [dependencies]
