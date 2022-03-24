@@ -10,6 +10,7 @@ Rust library to detect bots using a user-agent string.
 
 - Focused on speed, simplicity, and ensuring real devices and browsers don't get falsely identified as bots
 - Tested on over *12k* bot user agents and *180k* browser user agents - updated bot and browser lists are downloaded as part of the integration test suite
+- Easy to plugin as middleware to Actix, Rocket, or other Rust web frameworks
 - Includes a default collection of 300+ known bot user-agent regular expressions at compile time
 - Allows user-agent patterns to be manually added and removed at runtime
 
@@ -32,6 +33,44 @@ let bots = Bots::default();
 assert_eq!(bots.is_bot("Googlebot-Image/1.0"), true);
 assert_eq!(bots.is_bot("Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1"), false);
 ```
+### Middleware: Actix or Rocket
+`isbot` can be added as middleware to enable global or per-handler rejections of known bots. 
+
+#### Actix Example
+There are multiple ways to use `isbot` in Actix. One way is to pass a `Bots` instance into the app data as state. For example:
+
+```rust
+use isbot::Bots;
+
+struct AppState {
+    bots: Bots,
+}
+
+let state = AppState {
+    bots: Bots::default(),
+};
+let app = App::new()
+    .app_data(web::Data::new(state))
+    .route("/", web::get().to(index));
+```
+
+Request handlers can use the `Bots` data to filter out bots:
+
+```rust
+async fn index(req: HttpRequest, data: web::Data<AppState>) -> HttpResponse {
+    if let Some(user_agent) = get_user_agent(req.headers()) {
+        if data.bots.is_bot(user_agent) {
+            return HttpResponse::Forbidden().body("Bots not allowed");
+        }
+    }
+    HttpResponse::Ok().body("Home")
+}
+```
+
+Another option is to use add the middleware using the Actix `wrap_fn` function and globally reject all requests from bots. These 2 examples plus other options and details can be seen in the test examples:
+
+- [Actix Examples](./examples/actix_example.rs) 
+- [Rocket Examples](./examples/rocket_example.rs)
 
 ## Customizing
 Bot user-agent patterns can be customized by adding or removing patterns, using the `append` and `remove` methods.
@@ -100,6 +139,20 @@ To run all unit and integration tests:
 
 ```bash
 cargo test
+```
+
+### Actix tests
+To validate changes to the Actix examples run the following:
+
+```bash
+cargo test --example actix_example
+```
+
+### Rocket tests
+To validate changes to the Rocket examples run the following: 
+
+```bash
+cargo test --example rocket_example
 ```
 
 ## Philosophy

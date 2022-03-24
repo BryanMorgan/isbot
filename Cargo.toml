@@ -26,7 +26,12 @@ yaml-rust = {version = "0.4", optional = true}
 ureq = { version = "2.4",features = ["json"], optional = true}
 
 [dev-dependencies]
+actix-web = "4.0"
+actix-rt = "2.7"
+rocket = "0.5.0-rc.1"
+futures = "0.3"
 serde_json = "1.0"
+bytes = "1.1"
 
 [[bin]]
 name = "download_fixture_data"    
