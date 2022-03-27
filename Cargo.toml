@@ -36,4 +36,5 @@ bytes = "1.1.0"
 
 [[bin]]
 name = "download_fixture_data"    
+path = "src/bin/download_fixture_data.rs"
 required-features = ["download-fixture-data"] 
