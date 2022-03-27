@@ -9,8 +9,8 @@
 ^boardreader
 ^castro
 ^collectd
-^cortex
 ^comodo
+^cortex
 ^curl
 ^ddg_android
 ^duckduckgo

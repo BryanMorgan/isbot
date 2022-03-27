@@ -8,7 +8,7 @@ use std::{collections::HashSet, fmt::Debug};
 /// User-agent patterns are maintained as a single regular expression for fast validation.
 ///
 /// The default list of user-agent patterns balances a large set of known bots/crawlers
-/// while ensuring devices and browsers are not falsely identified as bots.
+/// while ensuring real browsers are not falsely identified as bots.
 ///
 /// # Examples
 ///
@@ -39,16 +39,16 @@ use std::{collections::HashSet, fmt::Debug};
 ///
 pub struct Bots {
     user_agent_patterns: HashSet<String>,
-    combined_user_agent_regex: Regex,
+    user_agents_regex: Regex,
 }
 
 /// Load default bot user-agent regular expressions from a local file, unless the feature is disabled
 #[cfg(feature = "include-default-bots")]
-const BOT_REGEX_LIST: &str = include_str!("bot_patterns.txt");
+const BOT_PATTERNS: &str = include_str!("bot_regex_patterns.txt");
 
 /// Do not load any default user-agent strings into the compiled library if feature is not enabled
 #[cfg(not(feature = "include-default-bots"))]
-const BOT_REGEX_LIST: &str = "";
+const BOT_PATTERNS: &str = "";
 
 impl Default for Bots {
     /// Constructs a new instance with default user-agent patterns.
@@ -63,7 +63,7 @@ impl Default for Bots {
     /// assert_eq!(bots.is_bot("Googlebot"), true);
     /// ```
     fn default() -> Self {
-        Bots::new(BOT_REGEX_LIST)
+        Bots::new(BOT_PATTERNS)
     }
 }
 
@@ -91,7 +91,7 @@ impl Bots {
         let combined_user_agent_regex = Bots::to_regex(&user_agent_patterns);
         Bots {
             user_agent_patterns,
-            combined_user_agent_regex,
+            user_agents_regex: combined_user_agent_regex,
         }
     }
 
@@ -110,7 +110,7 @@ impl Bots {
     /// assert_eq!(bots.is_bot("Dalvik/2.1.0 (Linux; U; Android 8.0.0; SM-G930F Build/R16NW)"), false);
     /// ```    
     pub fn is_bot(&self, user_agent: &str) -> bool {
-        self.combined_user_agent_regex
+        self.user_agents_regex
             .is_match(&user_agent.to_ascii_lowercase())
     }
 
@@ -164,7 +164,7 @@ impl Bots {
     }
 
     fn update_regex(&mut self) {
-        self.combined_user_agent_regex = Bots::to_regex(&self.user_agent_patterns)
+        self.user_agents_regex = Bots::to_regex(&self.user_agent_patterns)
     }
 
     fn parse_lines(bot_regex_entries: &str) -> HashSet<String> {
