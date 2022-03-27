@@ -19,7 +19,7 @@ jobs:
         os: [ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v2
-      - name: Install rust
+      - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -29,6 +29,7 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: check
+          args: --workspace --tests --all-features
 
   tests:
     name: Tests on ${{ matrix.os }}
@@ -39,7 +40,7 @@ jobs:
         
     steps:
       - uses: actions/checkout@v2
-      - name: Install rust
+      - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -51,14 +52,11 @@ jobs:
           command: test
 
   lint:
-    name: Lint on ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+    name: Lint
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install rust
+      - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
@@ -74,11 +72,23 @@ jobs:
       - name: Run cargo clippy
         uses: actions-rs/cargo@v1
         with:
-          command: clippy
-          args: 
+          command: clippy 
+          args: --workspace --tests --all-features
 
-      - name: Run cargo clippy on download_fixture_data
+  docs:
+    name: docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          components: rust-docs
+
+      - name: Run cargo docs
         uses: actions-rs/cargo@v1
         with:
-          command: clippy
-          args: --features=download-fixture-data
+          command: doc
+          args: --lib --no-deps
