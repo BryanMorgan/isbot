@@ -10,6 +10,7 @@ license = "MIT"
 keywords = ["isbot", "bot", "crawler", "user-agent", "browser"]
 categories = ["parsing", "web-programming", "web-programming::http-server"]
 exclude = ["/src/bin"]
+readme = "README.md"
 
 [features]
 default = ["include-default-bots"]
