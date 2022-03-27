@@ -17,21 +17,21 @@ include-default-bots = []
 download-fixture-data = ["serde", "serde_json", "yaml-rust", "ureq"]
 
 [dependencies]
-regex = "1.5"
+regex = "1.5.5"
 
 # Optional dependencies only needed to build the download_fixture_data binary
-serde =  {version = "1.0", features = ["derive"], optional = true}
-serde_json = {version = "1.0", optional = true}
-yaml-rust = {version = "0.4", optional = true}
-ureq = { version = "2.4",features = ["json"], optional = true}
+serde =  {version = "1.0.136", features = ["derive"], optional = true}
+serde_json = {version = "1.0.79", optional = true}
+yaml-rust = {version = "0.4.5", optional = true}
+ureq = { version = "2.4.0",features = ["json"], optional = true}
 
 [dev-dependencies]
-actix-web = "4.0"
-actix-rt = "2.7"
+actix-web = "4.0.1"
+actix-rt = "2.7.0"
 rocket = "0.5.0-rc.1"
-futures = "0.3"
-serde_json = "1.0"
-bytes = "1.1"
+futures = "0.3.21"
+serde_json = "1.0.79"
+bytes = "1.1.0"
 
 [[bin]]
 name = "download_fixture_data"    
