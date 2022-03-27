@@ -8,8 +8,8 @@ Rust library to detect bots using a user-agent string.
 
 #### Features
 
-- Focused on speed, simplicity, and ensuring real devices and browsers don't get falsely identified as bots
-- Tested on over *12k* bot user agents and *180k* browser user agents - updated bot and browser lists are downloaded as part of the integration test suite
+- Focused on speed, simplicity, and ensuring real browsers don't get falsely identified as bots
+- Tested on over *12k* bot user-agents and *180k* browser user-agents - updated bot and browser lists are downloaded as part of the integration test suite
 - Easy to plugin as middleware to Actix, Rocket, or other Rust web frameworks
 - Includes a default collection of 300+ known bot user-agent regular expressions at compile time
 - Allows user-agent patterns to be manually added and removed at runtime
@@ -99,9 +99,9 @@ assert_eq!(bots.is_bot("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTM
 ```
 
 ### Custom Bot list
-The default user-agent regular expression patterns are managed in the [bot_patterns.txt](./src/bot_patterns.txt) file.
+The default user-agent regular expression patterns are managed in the [bot_regex_patterns.txt](./src/bot_regex_patterns.txt) file.
 
-If you don't want to use the default bot patterns you can supply your own list. Since the default bot patterns are automatically added to the library at compile time you should first disable the default feature. The `include-default-bots` feature is enabled by default so the patterns defined in `bot_patterns.txt` are included in the library at compile time.
+If you don't want to use the default bot patterns you can supply your own list. Since the default bot patterns are automatically added to the library at compile time you should first disable the default feature. The `include-default-bots` feature is enabled by default so the patterns defined in `bot_regex_patterns.txt` are included in the library at compile time.
 
 You can exclude the patterns by disabling the default features and then including your own bot regular expressions. To do that set `default-features` to false in your `Cargo.toml` dependency definition. For example:
 
@@ -156,11 +156,11 @@ cargo test --example rocket_example
 ```
 
 ## Philosophy
-Bot detection is a gray area since there are no clear lines on what defines a bot user-agent and a real device user-agent. Some libraries focus on broadly classifying bots and trying to identify as many as possible, with the risk that some real devices may be caught and falsely flagged as bots.
+Bot detection is a gray area since there are no clear lines on what defines a bot user-agent and a real browser user-agent. Some libraries focus on broadly classifying bots and trying to identify as many as possible, with the risk that real user browser may be caught and falsely flagged as bots.
 
-This library's focus is on identifying known bots while primarily ensuring no real users or devices are falsely flagged. All of the bot user-agent patterns are validated against a large number of real devices and bot patterns to ensure devices are not incorrectly identified.
+This library's focus is on identifying known bots while primarily ensuring no real users or browsers are falsely flagged. All of the bot user-agent patterns are validated against a large number of real browsers and bot patterns to eliminate false positives.
 
-For example, the user-agent string below is identified as both a bot and a real device by various libraries and data sources:
+For example, the user-agent string below is identified as both a bot and a real browser by various libraries and data sources:
 
 ```javascript
 Mozilla/5.0 (Linux; Android 4.2.1; CUBOT GT99 Build/JOP40D) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19
@@ -184,11 +184,13 @@ There are many excellent bot detection libraries available for other languages a
 The following data sources are used directly or as inspiration for the static test data and downloaded user-agent identification:
 | Data Source  | Notes |
 | ------------- | ------------- |
-| https://user-agents.net/bots | User Agents Database |
-| https://myip.ms/files/bots/live_webcrawlers.txt   | List of IP addresses of Known Web Bots & Spiders in Myip.ms Database |
-| https://github.com/monperrus/crawler-user-agents   | Collection of user-agents used by robots, crawlers, and spiders  |
-| https://github.com/ua-core | Regex file necessary to build language ports of Browserscope's user agent parser| 
+| [user-agents.net](https://user-agents.net/bots) | User-Agents Database |
+| [myip.ms](https://myip.ms/files/bots/live_webcrawlers.txt) | List of IP addresses of Known Web Bots & Spiders in Myip.ms Database |
+| [monperrus](https://github.com/monperrus/crawler-user-agents) | Collection of user-agents used by robots, crawlers, and spiders  |
+| [ua-core](https://github.com/ua-core) | Regex file necessary to build language ports of Browserscope's user-agent parser| 
 
+## Contributing
+See the [Contributing](CONTRIBUTING.md) guide.
 
 ## License
 `isbot` is distributed under the terms of the MIT license. See [LICENSE](./LICENSE) for details.
