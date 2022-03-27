@@ -1,6 +1,7 @@
 # isbot
 [![CI](https://github.com/BryanMorgan/isbot/workflows/CI/badge.svg?event=push)](https://github.com/BryanMorgan/isbot/actions)
 [![Security Audit](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml/badge.svg)](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml)
+[![Crate](https://img.shields.io/crates/v/isbot.svg)](https://crates.io/crates/isbot)
 
 <img src="./.github/logo.png" width="100" align="right">
 
@@ -9,7 +10,7 @@ Rust library to detect bots using a user-agent string.
 #### Features
 
 - Focused on speed, simplicity, and ensuring real browsers don't get falsely identified as bots
-- Tested on over *12k* bot user-agents and *180k* browser user-agents - updated bot and browser lists are downloaded as part of the integration test suite
+- Tested on over **12k** bot user-agents and **180k** browser user-agents - updated bot and browser lists are downloaded as part of the integration test suite
 - Easy to plugin as middleware to Actix, Rocket, or other Rust web frameworks
 - Includes a default collection of 300+ known bot user-agent regular expressions at compile time
 - Allows user-agent patterns to be manually added and removed at runtime
