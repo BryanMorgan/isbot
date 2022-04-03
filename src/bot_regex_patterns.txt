@@ -150,6 +150,7 @@ g2 web services
 genieo
 gigablast
 go-http-client
+gobuster
 gomezagent
 google favicon
 google page speed insight
@@ -251,6 +252,7 @@ searchatlas
 seewithkids
 seobility
 seokicks
+seolizer
 seoscanners
 seznam
 simplepie
@@ -266,6 +268,7 @@ sogou
 sparkler/
 spider
 sputnik
+statically-
 staticlogin:productcbox
 statuscake
 summify
@@ -289,6 +292,7 @@ tweetedtimes
 twingly
 twurly
 um-ln
+unshortenit
 upflow
 uptime
 validator\.nu
@@ -303,6 +307,7 @@ w3c_unicorn
 w3c_validator
 webdatastats
 webmon 
+webreaper
 webthumbnail
 wesee:search
 wget

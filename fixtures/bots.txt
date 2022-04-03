@@ -32,6 +32,7 @@ AHC/1.0
 AHC/2.0
 AISearchBot (Email: aisearchbot@gmail.com; If your web site doesn't want to be crawled, please send us a email.)
 APIs-Google (+https://developers.google.com/webmasters/APIs-Google.html)
+APIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html)
 ARC Reader (http://arc.semsol.org/)
 Aboundex/0.2 (http://www.aboundex.com/crawler/)
 Aboundex/0.3 (http://www.aboundex.com/crawler/)
@@ -120,6 +121,7 @@ ArchiveBox/0.5.3 (+https://github.com/ArchiveBox/ArchiveBox/)
 ArchiveTeam ArchiveBot/20140807.01 (wpull 0.37a1) and not Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1985.125 Safari/537.36
 ArchiveTeam ArchiveBot/20141009.02 (wpull 0.1002a1) and not Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.101 Safari/537.36
 ArchiveTeam ArchiveBot/20170106.02 (wpull 2.0.2)
+ArchiveTeam ArchiveBot/20190617.01 (wpull 2.0.3) and not Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
 Argus/1.1 (Nutch; http://www.simpy.com/bot.html; feedback at simpy dot com)
 ArielisBot/1.1 (+http://arielis.com/
 Arikus_Spider
@@ -414,6 +416,7 @@ DuckDuckBot/1.1; (+http://duckduckgo.com/duckduckbot.html)
 DwnldBot (+http://dwnld.me)
 EDI/1.6.0 (Edacious & Intelligent Web Crawler)
 EDS EXIF/1.0 (https://www.exif-search.com)
+ELB-HealthChecker/1.0
 EMail Exractor
 ERACrawler/1.0
 EZID (EZID link checker; https://ezid.cdlib.org/)
@@ -548,6 +551,7 @@ GeekTools Crawler - http://domains.geek-tools.org
 GematchCrawler/2.1 (http://www.gematch.com/crawler.html)
 Genderanalyzer/1.0
 GentleSource Short URL Checker ( http://www.gentlesource.com/ )
+GermCrawler
 GetFoundBot (+http://www.getfound.cz/getfoundbot/)
 GetIntent Crawler (http://getintent.com/bot.html)
 GetProxi.es-bot/1.1 (http://getproxi.es/spiderinfo/)
@@ -562,6 +566,7 @@ GingerCrawler/1.0 (Language Assistant for Dyslexics; www.gingersoftware.com/craw
 Girls/2.0 (livedoor Co.,Ltd.; Peachy 2.1; iPhone; RSS Version 2.0; +http://girls.livedoor.com/)
 GloomarBot/1.1 (https://www.gloomar.com/bot)
 Gnam Gnam Spider
+Go-http-client
 Go-http-client/1.1
 Go-http-client/2.0
 GoGuidesBot/0.0.1 (GoGuides Indexing Spider; http://www.goguides.org/spider.html)
@@ -589,6 +594,7 @@ Google-speakr
 Google-speakr,gzip(gfe)
 GoogleCloudMonitoring
 GoogleProducer; (+http://goo.gl/7y4SX)
+GoogleStackdriverMonitoring-UptimeChecks
 Googlebot (gocrawl v0.4)
 Googlebot deepcrawl
 Googlebot-Image/1.0
@@ -1091,7 +1097,10 @@ Mozilla/5.0 (Google-PhysicalWeb)
 Mozilla/5.0 (Grabify.link - https://grabify.link/expander)
 Mozilla/5.0 (Java) outbrain
 Mozilla/5.0 (KeepRight OpenStreetMap Checker; http://keepright.at) Gecko/20100101 Firefox/22.0
+Mozilla/5.0 (Linux Android 5.0 SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36 Statically-Screenshot-Mobile/1.0 (+https://statically.io/screenshot/)
+Mozilla/5.0 (Linux Android 5.0 SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Mobile Safari/537.36 Statically-Screenshot-PDF/1.0 (+https://statically.io/screenshot/)
 Mozilla/5.0 (Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.79 Safari/537.36 (compatible; Statically-Screenshot; +https://statically.io/screenshot)
+Mozilla/5.0 (Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36 Statically-Screenshot/1.0 (+https://statically.io/screenshot/)
 Mozilla/5.0 (Linux; Android 4.0.4; Galaxy Nexus Build/IMM76B) AppleWebKit/537.36 (KHTML, like Gecko; Google-Publisher-Plugin) Chrome/27.0.1453 Mobile Safari/537.36
 Mozilla/5.0 (Linux; Android 4.1.2; Galaxy Nexus Build/JZO54K; GTmetrix http://gtmetrix.com/) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/26.0.1410.58 Mobile Safari/537.22
 Mozilla/5.0 (Linux; Android 4.1.2; Galaxy Nexus Build/JZO54K; GTmetrix https://gtmetrix.com/) AppleWebKit/537.22 (KHTML, like Gecko) Chrome/26.0.1410.58 Mobile Safari/537.22
@@ -1364,6 +1373,7 @@ Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36(KHTML, like Gecko) Chrome/69.
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.4 (KHTML, like Gecko; Google Page Speed Insights) Chrome/22.0.1229 Safari/537.4
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.4 (KHTML, like Gecko; Google Web Preview) Chrome/22.0.1229 Safari/537.4
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Chromium/31.0.1650.63 Site-Shot/2.1 (http://www.site-shot.com/) Safari/538.1
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) JobBot/5.0 (compatible; +http://www.jobseeker.com.au/bot.html) Safari/538.1
 Mozilla/5.0 (X11; Linux x86_64) adbeat.com/policy AppleWebKit/537.21 (KHTML, like Gecko) Firefox/34.0 Safari/537.21
 Mozilla/5.0 (X11; Linux x86_64)AppleWebKit/537.36 (KHTML, like Gecko; Google-Ads-Qualify)Chrome/85.0.4183.140 Safari/537.36
 Mozilla/5.0 (X11; Linux x86_64; GTmetrix http://gtmetrix.com/) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36
@@ -1412,6 +1422,7 @@ Mozilla/5.0 (compatible) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526
 Mozilla/5.0 (compatible) Feedfetcher-Google; (+http://www.google.com/feedfetcher.html)
 Mozilla/5.0 (compatible) Feedfetcher-Google;(+http://www.google.com/feedfetcher.html)
 Mozilla/5.0 (compatible) SemanticScholarBot (+https://www.semanticscholar.org/crawler)
+Mozilla/5.0 (compatible) WatchSumo/1.0.0 (http://www.watchsumo.com)
 Mozilla/5.0 (compatible;  Page2RSS/0.7; +http://page2rss.com/)
 Mozilla/5.0 (compatible; +centuryb.o.t9[at]gmail.com)
 Mozilla/5.0 (compatible; +http://servernfo.com/)
@@ -1498,6 +1509,7 @@ Mozilla/5.0 (compatible; BlinkaCrawler/1.0; +http://www.blinka.jp/crawler/)
 Mozilla/5.0 (compatible; BlinkaCrawler/1.0; http://www.blinka.jp/crawler/)
 Mozilla/5.0 (compatible; BlogTraffic/1.4 Feed-Fetcher; +http://www.blogtraffic.de/rss-bot.html)
 Mozilla/5.0 (compatible; BomboraBot/1.0; +http://www.bombora.com/bot)
+Mozilla/5.0 (compatible; BotPants/1.0; Linux; +info@copypants.com) KHTML/3.5.5 (like Gecko)
 Mozilla/5.0 (compatible; BountiiBot/1.1; +http://bountii.com/contact.php)
 Mozilla/5.0 (compatible; BoxcarBot/1.1; +awesome@boxcar.io)
 Mozilla/5.0 (compatible; BusinessSeek.biz_Directory; http://www.businessseek.biz/)
@@ -1724,6 +1736,7 @@ Mozilla/5.0 (compatible; JobKeresoBot; +https://www.kozvetlen-allasok.hu/help.js
 Mozilla/5.0 (compatible; JobdiggerSpider +http://www.jobdigger.nl/spider)
 Mozilla/5.0 (compatible; Jobrapido/1.1; +http://www.jobrapido.com)
 Mozilla/5.0 (compatible; Jooblebot/2.0; Windows NT 6.1; WOW64; +http://jooble.org/jooble-bot) AppleWebKit/537.36 (KHTML, like Gecko) Safari/537.36
+Mozilla/5.0 (compatible; Jooblebot/2.0; Windows NT 6.1; WOW64; +http://jooble.org/jooble-bot) Mobile
 Mozilla/5.0 (compatible; JungleKeyThumbnail/1.1; +http://www.junglekey.fr/)
 Mozilla/5.0 (compatible; KAZ.KZ_Bot/3.0)
 Mozilla/5.0 (compatible; KHTML, like Gecko) Chrome/43.0.2357.81 Safari/537.36 collection@infegy.com
@@ -2013,6 +2026,7 @@ Mozilla/5.0 (compatible; Seekport Crawler; http://seekport.com/)
 Mozilla/5.0 (compatible; Semager/1.4; http://www.semager.de/blog/semager-bots/)
 Mozilla/5.0 (compatible; Semager/1.4c; +http://www.semager.de/blog/semager-bots/)
 Mozilla/5.0 (compatible; SemanticBot/1.1)
+Mozilla/5.0 (compatible; Semanticbot/1.0; +http://sempi.tech/bot.html)
 Mozilla/5.0 (compatible; Semiocast HTTP client; http://semiocast.com/)
 Mozilla/5.0 (compatible; SemrushBot-BA; +http://www.semrush.com/bot.html)
 Mozilla/5.0 (compatible; SemrushBot-SA/0.97; +http://www.semrush.com/bot.html)
@@ -2456,6 +2470,7 @@ Mozilla/5.0 (compatible; redditbot/1.0; +http://www.reddit.com/feedback)
 Mozilla/5.0 (compatible; rogerBot/1.0; UrlCrawler; http://www.seomoz.org/dp/rogerbot)
 Mozilla/5.0 (compatible; sReleaseBot/6.1; +http://www.srelease.com/)
 Mozilla/5.0 (compatible; scanbot/1.0; +http://dazzlepod.com/ip/)
+Mozilla/5.0 (compatible; seo-audit-check-bot/1.0)
 Mozilla/5.0 (compatible; seolyt/1.1; +https://seolyt.com)
 Mozilla/5.0 (compatible; seoscanners.net/1; +spider@seoscanners.net)
 Mozilla/5.0 (compatible; seplinkbot/1.0 )
@@ -2868,6 +2883,7 @@ Python/3.8 aiohttp/3.7.2
 Python/3.9 aiohttp/3.7.3
 Qirina Hurdler v. 1.05 10.11.01 (+http://www.qirina.com/hurdler.html)
 QuerySeekerSpider ( http://queryseeker.com/bot.html )
+Quick-Crawler (+https://www.scrapinghub.com/)
 QuickFinder Crawler
 QuickiWiki/1.0 (http://www.quickiwiki.com; admin@quickiwiki.com) BasedOnNodeJs/0.10.23
 Quora Link Preview/1.0 (http://www.quora.com)
@@ -2941,6 +2957,7 @@ SEOENGBot/1.2 (+http://learn.seoeng.com/seoengbot.htm)
 SEOENGBot/1.2 (+http://learn.seoengine.com/seoengbot.htm)
 SEOENGBot/1.2 (+http://www.seoengine.com/seoengbot.htm)
 SEOENGWorldBot/1.0 (+http://www.seoengine.com/seoengbot.htm)
+SEOlizer/1.1 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.13) Gecko/20080311 Firefox/2.0.0.13 (+https://www.seolizer.de/bot.html)
 SEOstats 2.0.9 https://github.com/eyecatchup/SEOstats
 SEOstats 2.1.0 https://github.com/eyecatchup/SEOstats
 SETOOZBOT/5.0 ( compatible; SETOOZBOT/0.30 ; http://www.setooz.com/bot.html )
@@ -2967,6 +2984,7 @@ SauceNAO/1.0 (+http://saucenao.com/)
 ScSpider/0.2
 Scopia crawler 1.0 (+http://www.scopia.co)
 Scrapy/0.16.5 (+http://scrapy.org)
+Scrapy/0.18.4 (+http://scrapy.org)
 Scrapy/0.20.1 (+http://scrapy.org)
 Scrapy/0.22.2 (+http://scrapy.org)
 Scrapy/0.24.0 (+http://scrapy.org)
@@ -3136,6 +3154,8 @@ Spider_Monkey/7.06 (SpiderMonkey.ca info at http://SpiderMonkey.ca /sm.shtml)
 SpokeSpider/1.0 (http://support.spoke.com/webspider/) Mozilla/5.0 (not really)
 Spotify/1.0
 Sprinklr 2.0
+Statically-Images/2.0
+Statically-Staticzap/2.0
 StatoolsBot (+http://www.statools.com/bot.html)
 StatusCake Error Detector Crawler V0.01
 Steeler/3.3 (http://www.tkl.iis.u-tokyo.ac.jp/~crawler/)
@@ -3154,6 +3174,7 @@ Superfeedr bot/2.0 http://superfeedr.com - Make your feeds realtime: get in touc
 Superfeedr bot/2.0 http://superfeedr.com - Make your feeds realtime: get in touch!
 SurcentroBot
 SurveyBot/2.3 (Whois Source)
+Swiftbot
 SygolBot http://www.sygol.com
 Symfony Spider (http://symfony.com/spider)
 SynHttpClient-Built/5759
@@ -3172,6 +3193,7 @@ TLS tester from https://testssl.sh/dev/
 TLSProbe/1.0 (+https://scan.trustnet.venafi.com/)
 TTop-Crawler,gzip(gfe),gzip(gfe)
 TailsweepBlogCrawler/Tailsweep-2.9-SNAPSHOT (http://www.tailsweep.com/; bot at [tailsweep] dot com)
+TangibleeBot
 TangibleeBot/1.0.0.0 (http://tangiblee.com/bot)
 Taproot (Guzzle) http://taprootproject.com
 Tarantula/BETA-0.5 (Tarantula de la Enlle, el mejor buscador en la red; http://www.enlle.com; tarantula@enlle.com)
@@ -3371,6 +3393,7 @@ WebCrawler v1.3
 WebGazer/1.0 (+https://www.webgazer.io)
 WebImages 0.3 ( http://herbert.groot.jebbink.nl/?app=WebImages )
 WebRankSpider/1.37 (+http://ulm191.server4you.de/crawler/)
+WebReaper v9.7 - www.webreaper.net
 WebRingChecker/1.71 LWP/5.79
 WebSniffer/1.0 (+http://websniffer.cc/)
 WebTarantula.com Crawler
@@ -3720,6 +3743,7 @@ ganarvisitas/1.0 (+http://www.ganarvisitas.com/)
 genieBot ((http://64.5.245.11/faq/faq.html))
 gimme60 (Gimme60 Store ID Bot; gimme60.com)
 gipo-crawler/Nutch-1.10 (Global Internet Policy Observatory crawler)
+gobuster/3.1.0
 gonzo/1[P] (+http://www.suchen.de/faq.html)
 gonzo1[D] mailto:crawleradmin.t-info@telekom.de
 gonzo1[P] +http://www.suchen.de/faq.html
@@ -3743,6 +3767,7 @@ holmes/3.12.4 (http://morfeo.centrum.cz/bot)
 http-request/v0.7.0 (http://git.io/tl_S2w) node.js/v0.10.29
 http.rb/2.2.2 (Mastodon/1.5.1; +https://example-masto-instance.org/)
 http.rb/2.2.2 (Mastodon/1.6.1; +https://mathtod.online/)
+http.rb/3.0.0 (Mastodon/2.2.0; +https://mstdn.io/)
 http.rb/3.2.0 (Mastodon/2.4.3; +https://uwu.social/)
 http://arachnode.net 1.2
 http://arachnode.net 1.4
@@ -4020,6 +4045,7 @@ truwoGPS/1.0 (GNU/Linux; U; i686; en-US; +http://www.lan4lano.net/browser.html )
 uipbot/1.0 (uipbot@semasio.net)
 unchaos_crawler_2.0.2 (search.engine@unchaos.com)
 unfurlist (https://github.com/Doist/unfurlist)
+unshortenit 0.4.0
 updated/0.1-alpha (updated crawler; http://www.updated.com; crawler@updated.com)
 url_test (larbin2.6.3@unspecified.mail)
 urlfan-bot/1.0; +http://www.urlfan.com/site/bot/350.html
@@ -4324,98 +4350,3 @@ yrspider (Mozilla/5.0 (compatible; YRSpider; +http://www.yunrang.com/yrspider.ht
 yrspider (Mozilla/5.0 (compatible; YRSpider; http://www.yunrang.com/yrspider.html))
 zelist.ro feed parser (+http://www.zelist.ro)
 zspider/0.9-dev http://feedback.redkolibri.com/
-Mozilla/5.0 (compatible; adidxbot/2.0; +http://www.bing.com/bingbot.htm)
-AdsTxtCrawler/1.0
-Mozilla/5.0 (compatible; AndersPinkBot/1.0; +http://anderspink.com/bot.html)
-APIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html)
-Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/600.2.5 (KHTML, like Gecko) Version/8.0.2 Safari/600.2.5 (Applebot/0.1)
-ArchiveTeam ArchiveBot/20190617.01 (wpull 2.0.3) and not Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36
-Mozilla/2.0 (compatible; Ask Jeeves/Teoma; +http://sp.ask.com/docs/about/tech_crawling.html)
-ELB-HealthChecker/1.0
-Baiduspider+(+http://www.baidu.com/search/spider.htm)
-Barkrowler/0.7 (+http://www.exensa.com/crawl)
-Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)
-Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b
-BUbiNG (+http://law.di.unimi.it/BUbiNG.html)
-Buzzbot/1.0 (Buzzbot; http://www.buzzstream.com; buzzbot@buzzstream.com)
-Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3694.0 Mobile Safari/537.36 Chrome-Lighthouse
-CipaCrawler/3.0 (info@domaincrawler.com; http://www.domaincrawler.com/www.example.com)
-Mozilla/5.0 (compatible; CloudFlare-AlwaysOnline/1.0; +http://www.cloudflare.com/always-online) AppleWebKit/534.34
-CCBot/2.0 (http://commoncrawl.org/faq/)
-COMODO SSL Checker
-Mozilla/5.0 (compatible; BotPants/1.0; Linux; +info@copypants.com) KHTML/3.5.5 (like Gecko)
-Datafeedwatch/2.1.x
-Mozilla/5.0 (X11; Datanyze; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36
-Mozilla/5.0 (compatible; MSIE or Firefox mutant; not on Windows server;) Daumoa 4.0
-Domain Re-Animator Bot (http://domainreanimator.com) - support@domainreanimator.com
-Mozilla/5.0 (compatible; DotBot/1.1; http://www.opensiteexplorer.org/dotbot, help@moz.com)
-DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)
-eZ Publish Link Validator
-facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)
-Fyrebot/1.0
-GarlikCrawler/1.2 (http://garlik.com/, crawler@garlik.com)
-GermCrawler
-Go-http-client
-Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)
-Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0 (via ggpht.com GoogleImageProxy)
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.4 (KHTML, like Gecko; Google Page Speed Insights) Chrome/22.0.1229 Safari/537.4
-google-xrawler
-Mozilla/5.0 (compatible; Google-Site-Verification/1.0)
-GoogleStackdriverMonitoring-UptimeChecks
-Mozilla/5.0 (compatible; Google-Structured-Data-Testing-Tool +http://developers.google.com/structured-data/testing-tool/)
-Mozilla/5.0 (compatible; X11; Linux x86_64; Google-StructuredDataTestingTool; +http://www.google.com/webmasters/tools/richsnippets)
-Mozilla/5.0 (compatible; GrapeshotCrawler/2.0; +http://www.grapeshot.co.uk/crawler.php)
-Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)
-ImplisenseBot 1.0
-Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) JobBot/5.0 (compatible; +http://www.jobseeker.com.au/bot.html) Safari/538.1
-Mozilla/5.0 (compatible; Jooblebot/2.0; Windows NT 6.1; WOW64; +http://jooble.org/jooble-bot) Mobile
-The Knowledge AI
-Mozilla/5.0 (compatible; linkdexbot/2.0; +http://www.linkdex.com/bots/)
-LinkedInBot/1.0 (compatible; Mozilla/5.0; Jakarta Commons-HttpClient/3.1 +http://www.linkedin.com)
-Mozilla/5.0 (compatible; LoadTimeBot/0.9; +http://www.loadtime.net/bot.html)
-ltx71 - (http://ltx71.com/)
-Mozilla/5.0 (compatible; Linux x86_64; Mail.RU_Bot/2.0; +http://go.mail.ru/help/robots)
-Mozilla/5.0 (compatible; Mappy/1.0; +http://mappydata.net/bot/)
-http.rb/3.0.0 (Mastodon/2.2.0; +https://mstdn.io/)
-MauiBot (crawler.feedback+wc@gmail.com)
-Mozilla/5.0 (compatible; MegaIndex.ru/2.0; +https://www.megaindex.ru/?tab=linkAnalyze)
-msnbot/2.0b (+http://search.msn.com/msnbot.htm)
-msnbot-media/1.1 (+http://search.msn.com/msnbot.htm)
-Netcraft SSL Server Survey - contact info@netcraft.com
-Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcraft.com)
-Mozilla/5.0 (compatible; PRTG Network Monitor (www.paessler.com); Windows)
-Mozilla/5.0 (compatible; PR-CY.RU; + https://a.pr-cy.ru)
-Mozilla/5.0 (compatible; PrivacyAwareBot/1.1; +http://www.privacyaware.org)
-Mozilla/5.0 (compatible; proximic; +http://www.proximic.com/info/spider.php)
-Pu_iN Crawler (+http://semanticjuice.com/)
-QuerySeekerSpider ( http://queryseeker.com/bot.html )
-Quick-Crawler (+https://www.scrapinghub.com/)
-Scrapy/0.18.4 (+http://scrapy.org)
-Mozilla/5.0 (compatible; Semanticbot/1.0; +http://sempi.tech/bot.html)
-Mozilla/5.0 (compatible; seo-audit-check-bot/1.0)
-SeobilityBot (SEO Tool; https://www.seobility.net/sites/bot.html)
-Mozilla/5.0 (compatible; SEOdiver/1.0; +http://www.seodiver.com/bot)
-Mozilla/5.0 (compatible; SEOkicks-Robot; +http://www.seokicks.de/robot.html)
-Mozilla/5.0 (compatible; SISTRIX Crawler; http://crawler.sistrix.net/)
-Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.0) SiteCheck-sitecrawl by Siteimprove.com
-Mozilla/5.0 (Windows NT 6.1; WOW64) SkypeUriPreview Preview/0.5
-SocialRankIOBot; http://socialrank.io/about
-Swiftbot
-TangibleeBot
-Mozilla/5.0 (compatible; TeeRaidBot; +https://teeraid.com/bot/)
-TinEye-bot/0.51 (see http://www.tineye.com/crawler.html)
-Traackr.com
-Mozilla/5.0 (compatible; TrendsmapResolver/0.1)
-Mozilla/5.0 (compatible) WatchSumo/1.0.0 (http://www.watchsumo.com)
-Mozilla/5.0 (compatible; online-webceo-bot/1.0; +http://online.webceo.com)
-WikiDo/1.1 (http://wikido.com; crawler@wikido.com)
-Mozilla/5.0 (compatible; woorankreview/2.0; +https://www.woorank.com/)
-Mozilla/5.0 (compatible; woriobot +http://worio.com)
-Mozilla/5.0 (compatible; Yahoo Ad monitoring; https://help.yahoo.com/kb/yahoo-ad-monitoring-SLN24857.html)
-Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)
-Mozilla/5.0 (compatible; YandexDirect/3.0; +http://yandex.com/bots)
-Mozilla/5.0 (compatible; YandexMetrika/3.0; +http://yandex.com/bots)
-Yanga WorldSearch Bot v1.1/beta (http://www.yanga.co.uk/)
-Zabbix
-ZoomBot (Linkbot 1.0 http://suite.seozoom.it/bot.html)
-ZoominfoBot (zoominfobot at zoominfo dot com)
