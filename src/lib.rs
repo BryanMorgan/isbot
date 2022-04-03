@@ -1,42 +1,52 @@
+//! [![github]](https://github.com/BryanMorgan/isbot)&ensp;[![crates-io]](https://crates.io/crates/isbot)
+//!
+//! [github]: <https://img.shields.io/badge/github-8da0cb?style=for-the-badge&labelColor=555555&logo=github>
+//! [crates-io]: <https://img.shields.io/badge/crates.io-fc8d62?style=for-the-badge&labelColor=555555&logo=rust>
+//!
+//! Detect bots or crawlers identified by matching a user-agent to a collection of known bot patterns.
+//!
+//! User-agent patterns are maintained as a single regular expression for fast validation.
+//!
+//! The default list of user-agent patterns balances a large set of known bots
+//! while ensuring real browsers are not falsely identified as bots.
+//!
+//! # Examples
+//!
+//! ```
+//! use isbot::Bots;
+//!
+//! let bots = Bots::default();
+//! assert_eq!(bots.is_bot("Googlebot-Image/1.0"), true);
+//! assert_eq!(bots.is_bot("Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1"), false);
+//! ```
+//!
+//! User-agent regular expressions can be added or removed for specific use cases.
+//! For example, you could remove the Chrome Lighthouse bot from the list of known bots:
+//!
+//! ```
+//! let mut bots = isbot::Bots::default();
+//!
+//! // By default Chrome Lighthouse is considered a bot
+//! assert_eq!(bots.is_bot("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 Chrome-Lighthouse"), true);
+//! // Remove the Chrome Lighthouse regular expression pattern to indicate it is not a bot
+//! bots.remove(&["Chrome-Lighthouse"]);
+//! assert_eq!(bots.is_bot("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 Chrome-Lighthouse"), false);
+//! ```
+//!
+//! Or append a new user-agent to detect a custom bot:
+//! ```
+//! let mut bots = isbot::Bots::default();
+//!
+//! // Append a new custom bot user-agent regular expression
+//! assert_eq!(bots.is_bot("Mozilla/5.0 (CustomNewTestB0T /1.2)"), false);
+//! bots.append(&[r"CustomNewTestB0T\s/\d\.\d"]);
+//! assert_eq!(bots.is_bot("Mozilla/5.0 (CustomNewTestB0T /1.2)"), true);
+//! ```
+
 use regex::Regex;
 use std::{collections::HashSet, fmt::Debug};
 
 #[derive(Debug)]
-
-/// A collection of user-agent patterns used to detect known bots.
-///
-/// User-agent patterns are maintained as a single regular expression for fast validation.
-///
-/// The default list of user-agent patterns balances a large set of known bots/crawlers
-/// while ensuring real browsers are not falsely identified as bots.
-///
-/// # Examples
-///
-/// ```
-/// use isbot::Bots;
-///
-/// let bots = Bots::default();
-/// assert_eq!(bots.is_bot("Googlebot-Image/1.0"), true);
-/// assert_eq!(bots.is_bot("Opera/9.60 (Windows NT 6.0; U; en) Presto/2.1.1"), false);
-/// ```
-///
-/// User-agent regular expressions can be added or removed for specific use cases.
-/// For example, you could remove the Chrome Lighthouse bot from the list of known bots:
-///
-/// ```
-/// let mut bots = isbot::Bots::default();
-///
-/// // By default Chrome Lighthouse is considered a bot
-/// assert_eq!(bots.is_bot("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 Chrome-Lighthouse"), true);
-/// // Remove the Chrome Lighthouse regular expression pattern to indicate it is not a bot
-/// bots.remove(&["Chrome-Lighthouse"]);
-/// assert_eq!(bots.is_bot("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36 Chrome-Lighthouse"), false);
-///
-/// // Append a new custom bot user-agent regular expression
-/// assert_eq!(bots.is_bot("Mozilla/5.0 (CustomNewTestB0T /1.2)"), false);
-/// bots.append(&[r"CustomNewTestB0T\s/\d\.\d"]);
-/// assert_eq!(bots.is_bot("Mozilla/5.0 (CustomNewTestB0T /1.2)"), true);
-///
 pub struct Bots {
     user_agent_patterns: HashSet<String>,
     user_agents_regex: Regex,
