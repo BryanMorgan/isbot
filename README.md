@@ -22,7 +22,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-isbot = "0.1.0"
+isbot = "0.1.1"
 ```
 
 The example below uses the default bot patterns to correctly identify the `Googlebot-Image` user-agent as a bot and the `Opera` user-agent as a browser.
@@ -109,7 +109,7 @@ You can exclude the patterns by disabling the default features and then includin
 
 ```toml
 [dependencies]
-isbot = { version = "0.1.0", default-features = false }
+isbot = { version = "0.1.1", default-features = false }
 ```
 
 And then use `Bots::new()` to supply a newline delimited list of regular expressions. For example:
