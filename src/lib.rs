@@ -46,6 +46,15 @@
 use regex::Regex;
 use std::{collections::HashSet, fmt::Debug};
 
+/// Wrapper struct to maintain bot regular expression patterns
+///
+/// # Example
+///
+/// ```
+/// use isbot::Bots;
+///
+/// let bots = Bots::default();
+/// ```
 #[derive(Debug)]
 pub struct Bots {
     user_agent_patterns: HashSet<String>,
@@ -141,6 +150,7 @@ impl Bots {
     /// let new_bot_patterns = vec!["GoogleMetaverse", "^Special/"];
     /// bots.append(&new_bot_patterns);
     /// assert_eq!(bots.is_bot("Mozilla/5.0 (GoogleMetaverse/1.0)"), true);
+    /// ```
     pub fn append(&mut self, bots: &[&str]) {
         for bot in bots {
             self.user_agent_patterns.insert(bot.to_ascii_lowercase());
@@ -166,6 +176,7 @@ impl Bots {
     /// bots.remove(&bot_patterns_to_remove);
     /// assert_eq!(bots.is_bot("Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534+ (KHTML, like Gecko) BingPreview/1.0b"), false);
     /// assert_eq!(bots.is_bot("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.75 Safari/537.36 Google Favicon"), false);
+    /// ```
     pub fn remove(&mut self, bots: &[&str]) {
         for bot in bots {
             self.user_agent_patterns.remove(&bot.to_ascii_lowercase());
