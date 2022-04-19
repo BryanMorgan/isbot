@@ -1,5 +1,6 @@
 # isbot
 [![CI](https://github.com/BryanMorgan/isbot/workflows/CI/badge.svg?event=push)](https://github.com/BryanMorgan/isbot/actions)
+[![codecov](https://codecov.io/gh/BryanMorgan/isbot/branch/main/graph/badge.svg)](https://codecov.io/gh/BryanMorgan/isbot)
 [![Security Audit](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml/badge.svg)](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml)
 [![Crate](https://img.shields.io/crates/v/isbot.svg)](https://crates.io/crates/isbot)
 [![API](https://docs.rs/isbot/badge.svg)](https://docs.rs/isbot)
@@ -13,7 +14,7 @@ Rust library to detect bots using a user-agent string.
 - Focused on speed, simplicity, and ensuring real browsers don't get falsely identified as bots
 - Tested on over **12k** bot user-agents and **180k** browser user-agents - updated bot and browser lists are downloaded as part of the integration test suite
 - Easy to plugin as middleware to Actix, Rocket, or other Rust web frameworks
-- Includes a default collection of 300+ known bot user-agent regular expressions at compile time
+- Includes a default collection of bot user-agent regular expressions, optionally included at compile time
 - Allows user-agent patterns to be manually added and removed at runtime
 
 ## Usage
@@ -187,9 +188,9 @@ The following data sources are used directly or as inspiration for the static te
 | Data Source  | Notes |
 | ------------- | ------------- |
 | [user-agents.net](https://user-agents.net/bots) | User-Agents Database |
-| [myip.ms](https://myip.ms/files/bots/live_webcrawlers.txt) | List of IP addresses of Known Web Bots & Spiders in Myip.ms Database |
+| [myip.ms](https://myip.ms/files/bots/live_webcrawlers.txt) | List of known web bots & spiders |
 | [monperrus](https://github.com/monperrus/crawler-user-agents) | Collection of user-agents used by robots, crawlers, and spiders  |
-| [ua-core](https://github.com/ua-core) | Regex file necessary to build language ports of Browserscope's user-agent parser| 
+| [ua-core](https://github.com/ua-parser/uap-core) | Regex file and data to build language ports of Browserscope's user-agent parser| 
 
 ## Contributing
 See the [Contributing](CONTRIBUTING.md) guide.
