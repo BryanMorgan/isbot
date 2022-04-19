@@ -91,14 +91,14 @@ jobs:
         with:
           command: doc
           args: --lib --no-deps
-          
+
   coverage:
     name: Code Coverage
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Rust
-      - uses: actions-rs/toolchain@v1
+        uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           override: true
