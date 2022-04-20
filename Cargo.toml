@@ -1,6 +1,6 @@
 [package]
 name = "isbot"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 authors = ["Bryan Morgan <bryan@thinkware.io>"]
 description = "Detect if a user-agent is a known bot"

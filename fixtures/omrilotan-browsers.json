@@ -20,6 +20,7 @@
   "ExampleApp/1 Dalvik/2.1.0 (Linux; U; Android 6.0.1; vivo 1610 Build/MMB29M)",
   "ExampleApp/1 Windows Phone/10.0 Microsoft; Lumia 550",
   "ExampleApp/1 iPhone5,2 iOS/10_1 CFNetwork/808.3 Darwin/16.3.0",
+  "Hello, world",
   "Hulu/6.8.1 (iOS 13.3; en_US; iPhone12,1; 17C54)",
   "IBrowse/2.4demo (AmigaOS 3.9; 68K)",
   "IBrowse/2.5.4demo (Amiga; AmigaOS 3.1.4; Build 25.96 68K)",
@@ -494,6 +495,7 @@
   "espn app/6.14.0 dalvik/2.1.0 (linux; u; android 5.1.1; kfsuwi build/lvy48f)",
   "hulu/3.65.0.308030 (android 9; en_us; sm-g965u; build/ppr1.180610.011;)",
   "hulu/50000130 cfnetwork/976 darwin/18.2.0",
+  "iexplore.exe",
   "mWebView.getSettings().setUserAgentString(\\x22Mozilla/5.0 (Amiga; U; AmigaOS 1.3; en; rv:1.8.1.19);",
   "mot-V3/OE.40.79R MIB/2.2.1 profile/MIDP-2.0 configuration/CLDC-1.0 UP.Link/6.2.3.15.0"
 ]
