@@ -23,7 +23,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-isbot = "0.1.1"
+isbot = "0.1.2"
 ```
 
 The example below uses the default bot patterns to correctly identify the `Googlebot-Image` user-agent as a bot and the `Opera` user-agent as a browser.
