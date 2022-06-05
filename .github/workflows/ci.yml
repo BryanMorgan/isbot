@@ -24,9 +24,10 @@ jobs:
         with:
           path: |
             ~/.cargo/bin/
-            ~/.cargo/registry
-            ~/.cargo/git
-            ./target
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/ 
           key: ${{ runner.os }}-cargo
           restore-keys: ${{ runner.os }}-cargo
 
