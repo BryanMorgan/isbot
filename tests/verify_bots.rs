@@ -11,9 +11,8 @@ fn test_fixture_bots() {
     let file = File::open(&path).unwrap_or_else(|_| panic!("Unable to open file: {:?}", path));
     let reader = BufReader::new(file);
     for user_agent in reader.lines().flatten() {
-        assert_eq!(
+        assert!(
             bots.is_bot(&user_agent),
-            true,
             "User-agent is not a bot: {}",
             user_agent
         );

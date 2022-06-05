@@ -24,9 +24,8 @@ fn validate_bots(filename: &str) {
     for user_agent in get_json(filename) {
         // myip.ms incorrectly identifies CUBOT as a bot
         if !user_agent.contains(" CUBOT") {
-            assert_eq!(
+            assert!(
                 bots.is_bot(&user_agent),
-                true,
                 "User-agent is not a bot: {}",
                 user_agent
             );

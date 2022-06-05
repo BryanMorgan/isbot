@@ -22,9 +22,8 @@ fn validate_browsers(filename: &str) {
     let bots = Bots::default();
 
     for user_agent in get_json(filename) {
-        assert_eq!(
-            bots.is_bot(&user_agent),
-            false,
+        assert!(
+            !bots.is_bot(&user_agent),
             "User-agent is a bot, not a browser: {}",
             user_agent
         );

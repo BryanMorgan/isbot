@@ -11,9 +11,8 @@ fn test_fixture_browsers() {
     let file = File::open(&path).unwrap_or_else(|_| panic!("Unable to open file: {:?}", path));
     let reader = BufReader::new(file);
     for user_agent in reader.lines().flatten() {
-        assert_eq!(
-            bots.is_bot(&user_agent),
-            false,
+        assert!(
+            !bots.is_bot(&user_agent),
             "User-agent is a bot, not a browser: {}",
             user_agent
         );
