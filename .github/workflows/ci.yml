@@ -4,109 +4,64 @@ on:
   pull_request:
   push:
     branches: [ main ]
-  workflow_dispatch:
-
-env:
-  CARGO_TERM_COLOR: always
 
 jobs:
-  check:
-    name: Check [${{ matrix.os }}]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+  build_and_test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           override: true
+          components: rustfmt, clippy          
 
-      - name: Run cargo check
+      - name: ⚡ Cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+
+      - name: ✔ Check
         uses: actions-rs/cargo@v1
         with:
           command: check
           args: --workspace --tests --all-features
 
-  tests:
-    name: Tests [${{ matrix.os }}]
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-
-      - name: Run unit and integration tests
-        uses: actions-rs/cargo@v1
-        with:
-          command: test
-
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-          components: rustfmt, clippy
-
-      - name: Run cargo fmt
+      - name: ☕ Format
         uses: actions-rs/cargo@v1
         with:
           command: fmt
           args: --all -- --check
           
-      - name: Run cargo clippy
+      - name: 🌝 Clippy
         uses: actions-rs/cargo@v1
         with:
           command: clippy 
           args: --workspace --tests --all-features
 
-  docs:
-    name: Docs
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
+      - name: 🔎 Unit and integration tests
+        uses: actions-rs/cargo@v1
         with:
-          toolchain: stable
-          override: true
-          components: rust-docs
+          command: test
 
-      - name: Run cargo docs
+      - name: 📘 Run cargo docs
         uses: actions-rs/cargo@v1
         with:
           command: doc
           args: --lib --no-deps
 
-  coverage:
-    name: Code Coverage
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Install Rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-
-      - name: Run cargo-tarpaulin
+      - name: 🔨Code coverage
         uses: actions-rs/tarpaulin@v0.1
 
-      - name: Upload to codecov.io
+      - name: ⮕ Upload to codecov.io
         uses: codecov/codecov-action@v1
         with:
           token: ${{secrets.CODECOV_TOKEN}}
