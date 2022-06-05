@@ -16,18 +16,19 @@ jobs:
         with:
           toolchain: stable
           override: true
-          components: rustfmt, clippy          
+          profile: minimal
+          components: rustfmt, clippy, rust-docs          
 
       - name: ⚡ Cache
         uses: actions/cache@v3
         with:
           path: |
             ~/.cargo/bin/
-            ~/.cargo/registry/index/
-            ~/.cargo/registry/cache/
-            ~/.cargo/git/db/
-            target/
-          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+            ~/.cargo/registry
+            ~/.cargo/git
+            ./target
+          key: ${{ runner.os }}-cargo
+          restore-keys: ${{ runner.os }}-cargo
 
       - name: ✔ Check
         uses: actions-rs/cargo@v1
@@ -57,6 +58,18 @@ jobs:
         with:
           command: doc
           args: --lib --no-deps
+
+  code_coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+          profile: minimal
 
       - name: 🔨Code coverage
         uses: actions-rs/tarpaulin@v0.1
