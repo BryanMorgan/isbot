@@ -158,6 +158,7 @@ google search
 google web preview
 google-
 googleimageproxy
+goose/
 grouphigh/
 grub.org
 guzzlehttp

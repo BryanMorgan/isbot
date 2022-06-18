@@ -4350,3 +4350,4 @@ yrspider (Mozilla/5.0 (compatible; YRSpider; +http://www.yunrang.com/yrspider.ht
 yrspider (Mozilla/5.0 (compatible; YRSpider; http://www.yunrang.com/yrspider.html))
 zelist.ro feed parser (+http://www.zelist.ro)
 zspider/0.9-dev http://feedback.redkolibri.com/
+Goose/3.1.11
