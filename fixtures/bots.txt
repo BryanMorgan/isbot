@@ -606,6 +606,7 @@ Googlebot-richsnippets
 Googlebot/2.1 (+http://www.google.com/bot.html)
 Googlebot/2.1 (http://www.googlebot.com/bot.html)
 Googlebot/Nutch-1.7
+Goose/3.1.11
 GozaikBot (www.gozaik.com;webmaster@gozaik.com;www.gozaik.com/gozaikbot.html)
 Grabber -  https://sites.google.com/3ziele.de/grabber/
 Grahambot/0.1 (+http://www.sunaga-lab.com/graham-bot)
@@ -4049,6 +4050,7 @@ unshortenit 0.4.0
 updated/0.1-alpha (updated crawler; http://www.updated.com; crawler@updated.com)
 url_test (larbin2.6.3@unspecified.mail)
 urlfan-bot/1.0; +http://www.urlfan.com/site/bot/350.html
+urlgrabber/3.10
 vebidoobot
 venus/fedoraplanet
 veryhip (http://veryhip.com/)
@@ -4350,4 +4352,3 @@ yrspider (Mozilla/5.0 (compatible; YRSpider; +http://www.yunrang.com/yrspider.ht
 yrspider (Mozilla/5.0 (compatible; YRSpider; http://www.yunrang.com/yrspider.html))
 zelist.ro feed parser (+http://www.zelist.ro)
 zspider/0.9-dev http://feedback.redkolibri.com/
-Goose/3.1.11
