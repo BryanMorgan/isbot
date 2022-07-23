@@ -1092,6 +1092,7 @@ Mozilla/5.0 ( compatible; SETOOZBOT/0.30 ; http://www.setooz.com/bot.html ; agen
 Mozilla/5.0 (+http://www.sli-systems.com/) Mammoth/0.1
 Mozilla/5.0 (Android; Mobile; rv:21.0) Gecko/21.0 Firefox/21.0 commoncrawl.org/research//Nutch-1.7-SNAPSHOT
 Mozilla/5.0 (Compatible; Vedma/0.91Beta; +http://www.vedma.ru/bot.htm)
+Mozilla/5.0 (compatible; SeolytBot/1.0.1; https://seolyt.com)
 Mozilla/5.0 (FauBot/0.1; +http://buzzvolume.com/fau/)
 Mozilla/5.0 (GetLinkInfo.com - http://www.getlinkinfo.com)
 Mozilla/5.0 (Google-PhysicalWeb)

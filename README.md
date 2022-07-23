@@ -1,8 +1,9 @@
 # isbot
 [![CI](https://github.com/BryanMorgan/isbot/workflows/CI/badge.svg?event=push)](https://github.com/BryanMorgan/isbot/actions)
 [![codecov](https://codecov.io/gh/BryanMorgan/isbot/branch/main/graph/badge.svg)](https://codecov.io/gh/BryanMorgan/isbot)
-[![Security Audit](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml/badge.svg)](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml)
+[![security](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml/badge.svg)](https://github.com/BryanMorgan/isbot/actions/workflows/security-audit.yml)
 [![Crate](https://img.shields.io/crates/v/isbot.svg)](https://crates.io/crates/isbot)
+[![Downloads](https://img.shields.io/crates/d/isbot)](https://img.shields.io/crates/d/isbot)
 [![API](https://docs.rs/isbot/badge.svg)](https://docs.rs/isbot)
 
 <img src="./.github/logo.png" width="100" align="right">
